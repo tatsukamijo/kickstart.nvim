@@ -110,6 +110,14 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+-- Fold option
+vim.opt.foldmethod = 'indent'
+vim.opt.foldlevel = 99
+vim.keymap.set('n', '<Tab>', 'zo')
+vim.keymap.set('n', '<S-Tab>', 'zc')
+vim.keymap.set('n', '<Leader><Tab>', 'zR')
+vim.keymap.set('n', '<Leader><S-Tab>', 'zM')
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
