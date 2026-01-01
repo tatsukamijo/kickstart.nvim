@@ -118,6 +118,9 @@ vim.keymap.set('n', '<S-Tab>', 'zc')
 vim.keymap.set('n', '<Leader><Tab>', 'zR')
 vim.keymap.set('n', '<Leader><S-Tab>', 'zM')
 
+-- Jump list navigation (Ctrl-i is remapped by Tab)
+vim.keymap.set('n', '<C-n>', '<C-i>')
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
