@@ -222,6 +222,11 @@ vim.keymap.set('n', '<space>st', function()
   vim.api.nvim_win_set_height(0, 10)
 end)
 
+vim.keymap.set('n', '<space>sv', function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+end)
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
