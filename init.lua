@@ -256,6 +256,31 @@ vim.keymap.set('n', '<leader>op', ':silent !xdg-open "%" &<CR>', { desc = '[O]pe
 -- Neotree keybinds
 vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { noremap = true, silent = true })
 
+-- Buffer navigation
+vim.keymap.set('n', '<leader>bb', '<C-^>', { desc = '[B]uffer [B]ack (previous)' })
+vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', { desc = '[B]uffer [D]elete' })
+
+-- Move lines in visual mode
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move line down' })
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move line up' })
+
+-- Stay in visual mode after indent
+vim.keymap.set('v', '<', '<gv', { desc = 'Indent left and reselect' })
+vim.keymap.set('v', '>', '>gv', { desc = 'Indent right and reselect' })
+
+-- Center screen after search
+vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next match centered' })
+vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Prev match centered' })
+
+-- Paste without yanking (in visual mode)
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without yanking' })
+
+-- Quick save
+vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save file' })
+
+-- Yank to end of line (consistent with D and C)
+vim.keymap.set('n', 'Y', 'y$', { desc = 'Yank to end of line' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
