@@ -9,7 +9,7 @@ return {
   opts = {
     terminal = {
       split_side = 'right',
-      split_width_percentage = 0.4,
+      split_width_percentage = 0.35,
       snacks_win_opts = {
         keys = {
           -- Terminal mode: hide with same toggle key
